@@ -10,6 +10,7 @@ Every notebook runs on a laptop CPU in minutes, uses only public or synthetic da
 | Fine-tuning Whisper with Optuna, cross-validation and MLflow | Fine-tuning on real speech (LibriSpeech subset): chapter-grouped CV, Optuna pruning, nested MLflow runs, a locked test set and a zero-shot baseline | [en](en/whisper-optuna-mlflow.ipynb) · [Colab](https://colab.research.google.com/github/JMasr/ai-tutorials/blob/main/en/whisper-optuna-mlflow.ipynb) | [es](es/whisper-optuna-mlflow.ipynb) · [Colab](https://colab.research.google.com/github/JMasr/ai-tutorials/blob/main/es/whisper-optuna-mlflow.ipynb) |
 | PEFT and LoRA on Whisper | Where to place LoRA adapters for a downstream classifier vs. an embedding extractor; adapter checkpoints (synthetic audio) | [en](en/whisper-peft-lora.ipynb) · [Colab](https://colab.research.google.com/github/JMasr/ai-tutorials/blob/main/en/whisper-peft-lora.ipynb) | [es](es/whisper-peft-lora.ipynb) · [Colab](https://colab.research.google.com/github/JMasr/ai-tutorials/blob/main/es/whisper-peft-lora.ipynb) |
 | Inside an LLM guard | Reading a guard's verdict token as a continuous score, a logit lens with a probability-mass rule, the indirect-prompt-injection blind spot, and verdict-first vs rationale-first JSON for a prompted generalist guard (Qwen3Guard-Gen-0.6B, Qwen3-0.6B; 20 synthetic cases) | [en](en/llm-guard-internals.ipynb) · [Colab](https://colab.research.google.com/github/JMasr/ai-tutorials/blob/main/en/llm-guard-internals.ipynb) | [es](es/llm-guard-internals.ipynb) · [Colab](https://colab.research.google.com/github/JMasr/ai-tutorials/blob/main/es/llm-guard-internals.ipynb) |
+| The 10% of the terminal: a lab with four flags | The four terminal skills of the post (moving around, SSH with keys and an alias, tmux, top) practised on a real SSH server inside Google Colab, with a hidden flag per section and a `check()` cell | [en](en/terminal-10-90-lab.ipynb) · [Colab](https://colab.research.google.com/github/JMasr/ai-tutorials/blob/main/en/terminal-10-90-lab.ipynb) | [es](es/terminal-10-90-lab.ipynb) · [Colab](https://colab.research.google.com/github/JMasr/ai-tutorials/blob/main/es/terminal-10-90-lab.ipynb) |
 
 Written walkthroughs: https://jmramirez.engineer/tutorials/
 
@@ -23,9 +24,11 @@ jupyter lab
 
 On Colab, open a notebook with the badge above; the first cell lists the `%pip install` line it needs.
 
+The terminal lab is the exception: it runs **only in Google Colab**. It installs packages, creates a user with a known password and starts an SSH server inside Colab's disposable virtual machine, so do not run it on your own computer or on a shared server.
+
 ## Data
 
-The MFCC/PLP and Optuna notebooks download `hf-internal-testing/librispeech_asr_dummy`, a 73-utterance subset of LibriSpeech (Panayotov et al., 2015, CC BY 4.0). The PEFT notebook generates synthetic tones in memory. The LLM-guard notebook defines 20 fictional text cases in the notebook itself.
+The MFCC/PLP and Optuna notebooks download `hf-internal-testing/librispeech_asr_dummy`, a 73-utterance subset of LibriSpeech (Panayotov et al., 2015, CC BY 4.0). The PEFT notebook generates synthetic tones in memory. The LLM-guard notebook defines 20 fictional text cases in the notebook itself. The terminal lab generates its files and flags when you run it.
 
 ## License
 
